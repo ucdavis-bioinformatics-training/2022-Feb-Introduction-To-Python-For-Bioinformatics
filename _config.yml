@@ -13,4 +13,7 @@ navigation:
     url: base/install
 
   - heading: Python
+  - title: Intro
     url: python/python1
+  - title: Basic Data Types
+    url: python/python2
