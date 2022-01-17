@@ -30,6 +30,16 @@ gene_exp = 3.89
 print(gene_exp)
 ```
 
+### Strings
+Any text (including all symbols and spaces) is called a "string". Strings are designated by quotes around the text.
+
+```
+gene_id = "BRCA2"
+print(gene_id)
+hw = "HELLO!!! WORLD!!!"
+print(hw)
+```
+
 ### Booleans
 
 "In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted true 
@@ -43,12 +53,84 @@ print(control)
 print(treatment)
 ```
 
-### Strings
-Any text (including all symbols and spaces) is called a "string". Strings are designated by quotes around the text.
+Booleans come into play when making comparisons. The simplest comparisons are comparing integers:
 
 ```
-gene_id = "BRCA2"
-print(gene_id)
-hw = "HELLO!!! WORLD!!!"
-print(hw)
+print(1<1)
+print(1<2)
+print(2>1)
+print(1<=1)
+print(2>=1)
+
+# the double equals is an equality comparison, a single equals is for assignment.
+print(1==1)
+print(0==1)
+
+# You can also do string comparisons
+print(gene_id == "BRCA2")
+print(hw == "hello")
+```
+
+## Built-in datatypes and the type function
+
+You can use the "type" function to query the type of a variable:
+
+```
+print("The data type of the variable 'control' is:")
+print(type(control))
+print("The data type of the variable 'hw' is:")
+print(type(hw))
+print("The data type of the variable 'gene_count' is:")
+print(type(gene_count))
+```
+
+Here is a list of the built-in datatypes and their corresponding category:
+
+Text Type: str<br>
+Numeric Types: int, float, complex<br>
+Sequence Types: list, tuple, range<br>
+Mapping Type: dict<br>
+Set Types: set, frozenset<br>
+Boolean Type: bool<br>
+Binary Types: bytes, bytearray, memoryview<br>
+
+
+# Arithmetic: Adding, subtracting, multiplication, assignment arithmetic (assignment operators).
+<img src="figures/ed9e3c89.png" alt="if flow" width="600px"/>
+
+```
+# This is a comment. Comments are lines that being with a hashtag symbol.
+# They are ignored by the python interpreter and are used to document your code.
+a = 21
+b = 34
+
+# Addition
+print(a + b)
+
+# Subtraction
+print(b - a)
+
+# Division
+print(a/b)
+
+# Exponents
+print(4**b)
+#or
+expb = pow(4,b)
+print(expb)
+
+# Remainder 
+print(4 % 3)
+
+# Absolute value
+av = abs(22-32)
+print(av)
+
+# Round, Floor, Ceiling
+print(round(3.2))
+print(int(3.2))
+import math
+print(math.ceil(3.2))
+print(math.floor(3.7))
+print(int(3.7))
 ```
