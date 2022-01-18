@@ -134,3 +134,52 @@ print(math.ceil(3.2))
 print(math.floor(3.7))
 print(int(3.7))
 ```
+
+
+# Basic Data Structures: Lists, Sets, Tuples, Dictionaries.
+
+## Lists
++  <img src="figures/44b15102.png" alt="if flow" width="600px"/>
++  <img src="figures/2b36588e.png" alt="if flow" width="600px"/>
++  <img src="figures/93dd9342.png" alt="if flow" width="600px"/>
+
+```
+gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
+
+# get the first element in the list, 0-indexed
+gene1 = gene_list[0]
+print(gene1)
+
+# getting the last element in a list
+last_gene = gene_list[-1]
+print(last_gene)
+# OR
+last_gene = gene_list[5]
+print(last_gene)
+
+# getting a range of the list
+gene_list[-3:]
+gene_list[1:3]
+gene_list[:3]
+
+# get the length of a list
+len(gene_list)
+
+# lists can have elements of any type
+gene_exp = [43.2, 45, 60.1, 12, 0.5, 23]
+expval = gene_exp[2]
+print(expval)
+```
+
+## Dictionaries
+- A set of key/value pairs. Used primarily when you want to use a string as an index.
+- Dictionary values are pointed to by the keys. Values can be anything from int, float, and bool to lists, tuples, and dictionaries.
+
+<img src="figures/abda21dc.png" alt="dictionary" width="600px"/>
+
+```
+gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
+
+# You can access a value in the dictionary by referencing the key
+print(gene_exp_dict["WASH7P"])
+```
