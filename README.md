@@ -2,10 +2,10 @@ All documentation for the workshop is best viewed from the github.io pages
 
 [Documentation](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/)
 
-Introduction To Python For Bioinformatics
-Feb 28th - March 4th 2022, 2 to 5pm each day
-Organizer - [Bioinformatics Core at UC Davis](https://bioinformatics.ucdavis.edu/)
-Contact - UC Davis Bioinformatics Core, training.bioinformatics@ucdavis.edu
+Introduction To Python For Bioinformatics<br>
+Feb 28th - March 4th 2022, 2 to 5pm each day<br>
+Organizer - [Bioinformatics Core at UC Davis](https://bioinformatics.ucdavis.edu/)<br>
+Contact - UC Davis Bioinformatics Core, training.bioinformatics@ucdavis.edu<br>
 
 Get off to a good start in bioinformatics with this five-part online workshop in Introduction to Python. This workshop lays the foundation for successful bioinformatics experiments, including RNA-Seq, single cell RNA-Seq, epigenetics and more. Visit the course website for more information.
 
