@@ -53,4 +53,18 @@ if (diffexp > 0 and diffexp < 50):
 
 if (diffexp < -50 or diffexp > 50):
 	print("High Down or Up regulation")
+
+# The body of an if statement can have multiple lines of code
+diffexp=25
+if (diffexp > 0 and diffexp < 50):
+	print("Differential expression between 0 and 50")
+	print("Check the significance")
+
+# You can have if statements inside of other if statements
+sig = 0.049
+if (diffexp > 0 and diffexp < 50):
+	print("Differential expression between 0 and 50")
+
+	if (sig < 0.05):
+		print("It's significant!")
 ```
