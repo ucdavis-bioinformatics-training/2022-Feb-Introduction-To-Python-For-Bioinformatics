@@ -18,6 +18,8 @@ What is a variable? A variable is named storage that can be used to store anythi
 whole numbers, negative or positive
 
 ```
+print("Basic Data Types\n")
+
 gene_count = 7
 print(gene_count)
 ```
@@ -40,11 +42,25 @@ hw = "HELLO!!! WORLD!!!"
 print(hw)
 ```
 
+#### Built-in string methods
+
+Strings have a long list of built-in methods to return modified versions of the string. The methods do not modify the string, they return a new string.
+
+```
+tmpstr = "hello my name is Nik"
+
+allcaps = tmpstr.upper()
+print(allcaps)
+
+newstr = tmpstr.replace("Nik","Joe")
+print(newstr)
+```
+
+Here is a [list of the various methods](https://www.w3schools.com/python/python_ref_string.asp) you can use on strings.
+
 ### Booleans
 
-"In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted true 
-and false) which is intended to represent the two truth values of logic and Boolean algebra. It is named after George 
-Boole, who first defined an algebraic system of logic in the mid 19th century." [-wikipedia](https://en.wikipedia.org/wiki/Boolean_data_type)
+"In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted true and false) which is intended to represent the two truth values of logic and Boolean algebra. It is named after George Boole, who first defined an algebraic system of logic in the mid 19th century." [-wikipedia](https://en.wikipedia.org/wiki/Boolean_data_type)
 
 ```
 control = False
@@ -99,6 +115,8 @@ Binary Types: bytes, bytearray, memoryview<br>
 <img src="figures/ed9e3c89.png" alt="if flow" width="600px"/>
 
 ```
+print("\nArithmatic\n")
+
 # This is a comment. Comments are lines that being with a hashtag symbol.
 # They are ignored by the python interpreter and are used to document your code.
 a = 21
@@ -144,6 +162,8 @@ print(int(3.7))
 +  <img src="figures/93dd9342.png" alt="if flow" width="600px"/>
 
 ```
+print("\nLists\n")
+
 gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
 
 # get the first element in the list, 0-indexed
@@ -158,9 +178,13 @@ last_gene = gene_list[5]
 print(last_gene)
 
 # getting a range of the list
-gene_list[-3:]
-gene_list[1:3]
-gene_list[:3]
+print(gene_list[-3:])
+print(gene_list[1:3])
+print(gene_list[:3])
+
+# The same range concept works for strings
+mystring = "The Quick Brown Fox"
+print(mystring[4:9])
 
 # get the length of a list
 len(gene_list)
@@ -170,16 +194,50 @@ gene_exp = [43.2, 45, 60.1, 12, 0.5, 23]
 expval = gene_exp[2]
 print(expval)
 ```
+### Built-in list methods
+
+Lists have built-in methods which WILL modify the list in place.
+
+```
+gene_list.append("BRCA2")
+print(gene_list)
+
+gene_list.remove("WASH7P")
+print(gene_list)
+
+gene_list.reverse()
+print(gene_list)
+```
+
+Here is a [list of functions and methods for lists](https://www.tutorialspoint.com/built-in-list-functions-and-methods-in-python).
 
 ## Dictionaries
-- A set of key/value pairs. Used primarily when you want to use a string as an index.
+- A set of key/value pairs where the keys are unique. Used primarily when you want to use a string as an index.
 - Dictionary values are pointed to by the keys. Values can be anything from int, float, and bool to lists, tuples, and dictionaries.
 
 <img src="figures/abda21dc.png" alt="dictionary" width="600px"/>
 
 ```
+print("\nDictionaries\n")
+
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
 
 # You can access a value in the dictionary by referencing the key
 print(gene_exp_dict["WASH7P"])
+
+# You can overwrite a value
+gene_exp_dict["WASH7P"] = 39
+print(gene_exp_dict["WASH7P"])
+
+# You can add a new value
+gene_exp_dict["BRCA2"] = 100
+print(gene_exp_dict)
+
+# dict built-in methods
+
+# returns all the keys
+print(gene_exp_dict.keys())
+
+# returns all the values
+print(gene_exp_dict.values())
 ```
