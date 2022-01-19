@@ -12,7 +12,7 @@ Flow control is the bread and butter of programming. It is how you can program d
 - The following are valid orders of statements. In both scenarios where elif is, as many elif statements can be there as desired.
     +  <img src="figures/92a150bb.png" alt="if flow" width="600px"/>
 
-**INDENTATION MATTERS**
+\*\*\***INDENTATION MATTERS!!!**\*\*\*
 
 In many other languages, the "body" of an "if statement" (or any other programming construct that has a "body") is designated by curly braces. However, python doesn't do that. Instead, the "body" is designated by indentation. Any code that is indented to the same level is considered to be part of the same "body". The "condition" of the if statement is evaluated to be True or False. If True, then the code block associated with that statement is executed and not any others. If False, then the next statement is evaluated. "else" is the catchall default.
 
