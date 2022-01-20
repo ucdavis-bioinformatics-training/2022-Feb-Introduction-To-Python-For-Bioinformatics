@@ -76,6 +76,8 @@ A "For Loop" is a programming construct that is used to run a task many times in
 ### Iterating using indices
 
 ```
+print("\nFor Loops\n")
+
 # The range(n) function returns values from 0 to n-1
 for i in range(5):
 	print(i)
@@ -97,4 +99,20 @@ gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"M
 
 for gene in gene_exp_dict.keys():
 	print("Gene " + gene + " has expression value: " + gene_exp_dict[gene])
+```
+
+
+# While Loops
+
+A "While Loop" is used when you don't know how many times something will loop. The body of the loop will continue to execute, over and over, until the loop condition becomes false.
+
+```
+print("\nWhile Loops\n")
+
+n = 1
+fact = 1
+while (n < 8):
+	fact = fact * n
+	n += 1
+print(fact)
 ```
