@@ -1,6 +1,6 @@
 # Flow Control
 
-Flow control is the bread and butter of programming. It is how you can program different paths for the program to take or to loop through a task many times.
+Flow control is the bread and butter of programming. It is how you can program different paths for the program to take or to loop through a task many times. Let's create a new file for this section, "flow_control.py".
 
 ## If,elif,else statements
 
@@ -67,4 +67,34 @@ if (diffexp > 0 and diffexp < 50):
 
 	if (sig < 0.05):
 		print("It's significant!")
+```
+
+# For Loops
+
+A "For Loop" is a programming construct that is used to run a task many times in a row, where you know how many times you want to loop.
+
+### Iterating using indices
+
+```
+# The range(n) function returns values from 0 to n-1
+for i in range(5):
+	print(i)
+```
+
+### Iterating through a List
+
+```
+gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
+
+for id in gene_list:
+	print(id + " is a gene of interest")
+```
+
+### Iterating through a Dictionary
+
+```
+gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
+
+for gene in gene_exp_dict.keys():
+	print("Gene " + gene + " has expression value: " + gene_exp_dict[gene])
 ```

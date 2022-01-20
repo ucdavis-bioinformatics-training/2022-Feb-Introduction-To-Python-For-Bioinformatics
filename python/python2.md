@@ -47,13 +47,17 @@ print(hw)
 Strings have a long list of built-in methods to return modified versions of the string. The methods do not modify the string, they return a new string.
 
 ```
-tmpstr = "hello my name is Nik"
+tmpstr = "hello my name is Nik."
 
 allcaps = tmpstr.upper()
 print(allcaps)
 
 newstr = tmpstr.replace("Nik","Joe")
 print(newstr)
+
+# you can also use the + symbol to concatenate strings
+tmpstr2 = "How are you doing?"
+print(tmpstr + " " + tmpstr2)
 ```
 
 Here is a [list of the various methods](https://www.w3schools.com/python/python_ref_string.asp) you can use on strings.
@@ -240,4 +244,7 @@ print(gene_exp_dict.keys())
 
 # returns all the values
 print(gene_exp_dict.values())
+
+# returns all the key,value pairs
+print(gene_exp_dict.items())
 ```
