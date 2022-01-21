@@ -17,5 +17,5 @@ navigation:
     url: python/python1
   - title: Basic Data Types
     url: python/python2
-  - title: Flow Control
+  - title: Flow Control, Functions, Errors
     url: python/python3

@@ -116,3 +116,52 @@ while (n < 8):
 	n += 1
 print(fact)
 ```
+
+### Break & Continue
+
+'break' and 'continue' are two commands that can be used in loops. 'break' exits the loop and 'continue' skips the rest of the loop body (for the current iteration) and starts with the next iteration of the loop.
+
+```
+gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
+
+for id in gene_list:
+	print(id + " is a gene of interest")
+	if (id == "MIR1302-2HG"):
+		break
+
+for id in gene_list:
+	if (id == "MIR1302-2HG"):
+		continue
+
+	print(id + " is a gene of interest")
+```
+
+# Functions
+
+A function is a block of code that only gets run when it is called. It can take multiple parameters and can return values as well. Functions are an integral part of making reusable and clear code. 
+
+```
+# imports are used to be able to use code from other libraries
+import math
+
+print("\nFunctions\n")
+
+# Functions can have zero parameters and return nothing
+def hello():
+	print("Hello, World!")
+
+hello()
+
+# Or they can have multiple parameters and return something
+def logfc(exp1,exp2):
+	retval = math.log(exp2/exp1)
+	return(retval)
+
+gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
+
+de = logfc(gene_exp_dict['WASH7P'], gene_exp_dict['FAM138A'])
+print("The DE value is " + de)
+
+# They can also have default values for any of the parameters
+def 
+```
