@@ -115,6 +115,28 @@ Boolean Type: bool<br>
 Binary Types: bytes, bytearray, memoryview<br>
 
 
+## Casting
+
+In python, you can convert certain values for certain datatypes to other datatypes. Three of the commonly used functions for this are 'bool', 'int', and 'str'.
+
+```
+# convert a string to a boolean
+tmpstr = "Hello"
+tmpbool = bool(tmpstr)
+print(tmpbool)
+
+# convert a decimal to a string
+# the print function can only print strings
+x = 45.5
+print("The number is: " + str(x))
+
+# convert string to an integer
+mystr = "50"
+myint = int(mystr) + 1
+print(str(myint))
+```
+
+
 # Arithmetic: Adding, subtracting, multiplication, assignment arithmetic (assignment operators).
 <img src="figures/ed9e3c89.png" alt="if flow" width="600px"/>
 

@@ -160,7 +160,7 @@ def logfc(exp1,exp2):
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
 
 de = logfc(gene_exp_dict['WASH7P'], gene_exp_dict['FAM138A'])
-print("The DE value is " + de)
+print("The DE value is " + str(de))
 
 # They can also have default values for any of the parameters
 def 
