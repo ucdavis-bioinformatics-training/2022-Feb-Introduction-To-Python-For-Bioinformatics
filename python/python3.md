@@ -163,5 +163,59 @@ de = logfc(gene_exp_dict['WASH7P'], gene_exp_dict['FAM138A'])
 print("The DE value is " + str(de))
 
 # They can also have default values for any of the parameters
-def 
+def logfc(exp1,exp2,sigdig=3):
+	retval = math.log(exp2/exp1)
+	retval = round(retval, sigdig)
+	return(retval)
+
+print(logfc(89,12,5))
+print(logfc(89,12))
+```
+
+# Errors
+
+As you code more, you will certainly run into different kinds of errors. In python there are 3 main types of errors: Syntax, Logical, and Runtime. 
+
+### Syntax error
+
+A syntax error is an error arising from writing incorrect python code. Most syntax errors arise from typos, improper indentation, or incorrect function usage. 
+
+```
+print("\nErrors\n")
+
+# This will produce a syntax error in the terminal
+print "Hello World!"
+```
+
+### Logial error
+
+Logical errors are the hardest to find because the python interpreter cannot catch them for you. It is an error that is based on an incorrect coding of whatever algorithm you are trying to create.
+
+```
+# this will run, but the average is not calculated
+# correctly. Python follows the Order of Operations.
+x = 3
+y = 4
+average = x + y / 2
+print(average)
+```
+
+### Runtime error
+
+Because python is an interpreted language, some errors will only get produced when that piece of code is actually run. Common examples of runtime errors are using an undefined variable or mistyping the variable name. 
+
+```
+# this will NOT produce an error, even though myVar is undefined
+# because the function does not get called
+myvar = 9
+def px():
+	print(myVar)
+```
+
+```
+# This will produce the error when the function is called
+myvar = 9
+def px():
+	print(myVar)
+px()
 ```
