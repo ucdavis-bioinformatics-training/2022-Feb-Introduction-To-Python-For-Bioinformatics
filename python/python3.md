@@ -219,3 +219,5 @@ def px():
 	print(myVar)
 px()
 ```
+
+**It is important that you look at the output of syntax or runtime errors and use it to figure out the problem. The python interpreter will give you the line number of where the error occurred and the specific error that it found. This is very useful in fixing your problem. Logical errors are harder to figure out and as a beginner it is easiest to add print statements in your code to figure out where things went wrong.**
