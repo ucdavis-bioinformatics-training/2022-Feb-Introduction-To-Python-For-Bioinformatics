@@ -269,4 +269,7 @@ print(gene_exp_dict.values())
 
 # returns all the key,value pairs
 print(gene_exp_dict.items())
+
+# you can also check if a key exists in a dictionary
+print("BRCA2" in gene_exp_dict)
 ```
