@@ -172,6 +172,10 @@ print(logfc(89,12,5))
 print(logfc(89,12))
 ```
 
+# File Handling
+
+Reading from and writing to files is a integral part of programming. First let's [download a TSV (tab separated values) file](). Make sure to save it to the directory that your code is in.
+
 # Errors
 
 As you code more, you will certainly run into different kinds of errors. In python there are 3 main types of errors: Syntax, Logical, and Runtime. 
