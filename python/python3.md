@@ -174,7 +174,48 @@ print(logfc(89,12))
 
 # File Handling
 
-Reading from and writing to files is a integral part of programming. First let's [download a TSV (tab separated values) file](). Make sure to save it to the directory that your code is in.
+Reading from and writing to files is a integral part of programming. First let's [download a TSV (tab separated values) file](https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics/raw/master/python/DMR.GBM2.vs.NB1.tsv). Make sure to save it to the directory that your code is in.
+
+```
+print("\nFile Handling\n")
+
+# open the file for reading
+f = open("DMR.GBM2.vs.NB1.tsv", "r")
+print(f.readline())
+print(f.readline())
+
+# you can use a loop to read the whole file, line by line
+f2 = open("DMR.GBM2.vs.NB1.tsv", "r")
+for line in f2:
+	print(line)
+
+# always close file handles when you done with them
+f.close()
+f2.close()
+```
+
+Now let's try writing to a file. When opening a file for writing, you can use either "w" for (over)write or "a" for append.
+
+```
+# open a new file for writing, will create if doesn't exist
+f3 = open("myfile.txt", "w")
+f3.write("Hello World!")
+f3.close()
+
+# read the whole file at once
+f4 = open("myfile.txt","r")
+print(f4.read())
+f4.close()
+
+# Now append to the file
+f3 = open("myfile.txt", "a")
+f3.write("How are you?")
+f3.close()
+
+f4 = open("myfile.txt","r")
+print(f4.read())
+f4.close()
+```
 
 # Errors
 
