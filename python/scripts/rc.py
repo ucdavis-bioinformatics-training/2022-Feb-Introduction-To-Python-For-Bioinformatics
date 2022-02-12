@@ -9,3 +9,6 @@ for letter in seqlist:
     revlist.append(compdict[letter])
 
 print(''.join(revlist))
+
+
+# seq.translate(seq.maketrans("ACGT","TGCA"))[::-1]

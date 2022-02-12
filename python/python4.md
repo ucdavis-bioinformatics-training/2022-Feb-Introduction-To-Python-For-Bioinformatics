@@ -35,7 +35,7 @@ Hints:
 2. You will use the "list" function to break apart the sequence into a list and reverse the list using [built-in list methods](https://www.w3schools.com/python/python_ref_list.asp).
 3. Loop through the bases and create a new list where each element of the new list is the complement of each from the old list. Use your dictionary to do this.
 4. Print the new list using the "join" string method.
-5. For a bonus, see if you can do all of steps 2-4 in just one line. You will need to look at [string slicing in python](https://www.geeksforgeeks.org/string-slicing-in-python/), and you will need to use a special string method.
+5. For a bonus, see if you can do all of steps 2-4 in just one line. You will need to look at [string slicing in python](https://www.geeksforgeeks.org/string-slicing-in-python/), and you will need to use some special string methods.
 
 
 ## Exercise 4 - Reverse Complement of each fasta sequence, output to a file
