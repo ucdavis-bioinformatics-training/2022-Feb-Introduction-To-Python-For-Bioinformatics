@@ -44,7 +44,7 @@ Create a new file called "rc_fasta.py". Use the reverse complementing code from 
 
 Hints:
 1. First create a function that takes a sequence (string) as input and returns the reverse complement.
-2. Open your output file for writing.
+2. Open your output file for writing. Call it "out.fa".
 3. Open the fasta file and read each line.
 4. For each header line, append "\_rc" to the end.
 5. For the sequence lines, you will have to gather them together until you have all of them for one fasta entry and then reverse complement the entire thing using your function.
