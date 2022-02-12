@@ -47,7 +47,7 @@ Hints:
 2. Open your output file for writing. Call it "out.fa".
 3. Open the fasta file and read each line.
 4. For each header line, append "\_rc" to the end.
-5. For the sequence lines, you will have to gather them together until you have all of them for one fasta entry and then reverse complement the entire thing using your function.
-6. Output the fasta entry to the output file. You will need to figure out the appropriate time to do this in the loop. Note that the "write" function does not output a newline, you will have to add a newline.
+5. For the sequence lines, you will have to gather them together until you have all of them for one fasta entry.
+6. Output the reverse complemented fasta entry (using your function) to the output file. You will need to figure out the appropriate time to do this in the loop. Note that the "write" function does not output a newline, you will have to add a newline.
 7. Do this for all the fasta records.
 8. Close your files.
