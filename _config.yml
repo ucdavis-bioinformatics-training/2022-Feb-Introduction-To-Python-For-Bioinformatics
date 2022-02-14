@@ -11,6 +11,8 @@ navigation:
     url: base/welcome
   - title: Installing python3 and VSCode
     url: base/install
+  - title: File Types
+    url: python/filetypes
 
   - heading: Python
   - title: Intro

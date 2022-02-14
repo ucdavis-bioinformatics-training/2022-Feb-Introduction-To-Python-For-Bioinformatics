@@ -51,3 +51,8 @@ Hints:
 6. Output the reverse complemented fasta entry (using your function) to the output file. You will need to figure out the appropriate time to do this in the loop. Note that the "write" function does not output a newline, you will have to add a newline.
 7. Do this for all the fasta records.
 8. Close your files.
+
+
+## Exercise 5 - Quality-based fastq trimmer
+
+Okay, now let's try something more complex... a tool for trimming fastq sequences using a quality score cutoff. We will only do this for single-end Illumina reads just to make it easier. First, you need to understand the fastq format and how the quality scores are encoded.
