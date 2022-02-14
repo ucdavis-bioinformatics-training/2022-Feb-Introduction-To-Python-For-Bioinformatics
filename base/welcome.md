@@ -47,18 +47,6 @@ Text based communication will be conducted via a Slack channel. Staff will be mo
 
 [Learn more about how we use Slack in our workshops.](./slack)
 
-#### Patience
-
-We ask for a little more patience as this process is also new to us, but we are committed to providing you the best educational experience we can (under the current conditions).
-
-### Workshop Goals
-
-This workshop is intended to provide a comprehensive introduction to the basics of the command line as it is used for bioinformatics. By the end of the third session, participants should:
-
-* Be able to navigate a Unix / Linux file system on the command line
-* Copy, rename, move, and edit files
-* Pipe command line tools together to create complex commands
-* Use a high-performance computing cluster
 
 ### Workshop Materials
 
@@ -78,14 +66,3 @@ Workshop materials are all posted on github, and publicly available
 * This Introduction to the Command Line for Bioinformatics workshop
 
    [https://ucdavis-bioinformatics-training.github.io/2021-March-Introduction-to-the-Command-Line-for-Bioinformatics/](https://ucdavis-bioinformatics-training.github.io/2021-March-Introduction-to-the-Command-Line-for-Bioinformatics/)
-
-### Computing Cluster
-
-A portion of  this course will be conducted on our servers and compute cluster (tadpole.genomecenter.ucdavis.edu).
-
-Everyone should get an account.  
-[https://computing.genomecenter.ucdavis.edu](https://computing.genomecenter.ucdavis.edu)
-
-Request an account -> sponsor is "Bioinformatics Core Workshop"
-
-If you already have, or have had in the past, an account on our systems, then please tell us your username, or email, and we will add you to the workshop. **Do not create a new account**
