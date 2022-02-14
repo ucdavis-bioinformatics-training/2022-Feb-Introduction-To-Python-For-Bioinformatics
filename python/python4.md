@@ -57,11 +57,14 @@ Hints:
 
 Okay, now let's try something more complex... a tool for trimming fastq sequences using a quality score cutoff. We will only do this for single-end Illumina reads just to make it easier. First, you need to understand the fastq format and how the quality scores are encoded. So let's take a look at some [bioinformatics file types](filetypes).
 
-Let's [download a small fastq file](data/samp1.fastq) to use. Take a look at it. What we want to do is trim the sequences (and the quality values) so that they are trimmed at the place where a base's (reading from left to right) quality value drops below a given threshold. Let's use a threshold of 30 to begin with. Then write the trimmed data to a new file.
+Let's [download a small fastq file](data/samp1.fastq) to use. Take a look at it. Open a new program file called "fastq_trimmer.py". What we want to do is trim the sequences (and the quality values) so that they are trimmed at the place where a base's quality value (reading from left to right) drops below a given threshold. Let's use a threshold of 15 to begin with. Then write the trimmed data to a new file.
 
 Hints:
 1. First write a function that takes two parameters, a sequence and a quality threshold, and returns the position where the sequence and quality lines will be trimmed. You will need to use the "ord" built-in function, which returns the decimal ASCII value of a character. You will need to use a loop to go through each quality value and check if it drops below the threshold. If it does, you will return the position for that value. If it doesn't then you should return the last position.
-2. Open the input and output files. Loop through the input file, reading 4 lines at a time (into 4 separate variables). Use your function to find the place to cut. 
-3. Cut both the sequence and quality lines using the trimming position and [string slicing in python](https://www.geeksforgeeks.org/string-slicing-in-python/).
-4. Write a new fastq record (4 lines) to the output file. Do this for all the records.
-5. Close your files.
+2. Open the input and output files. Loop through the input file, using a "while (True)" loop, reading 4 lines at a time into 4 separate variables (header, seq, header2, qual). Right after reading in "header", check to see if it is False. If it is, this means that there is no more input, so put code to exit the loop.
+3. Use your function to find the place to cut. 
+4. Cut both the sequence and quality lines using the trimming position and [string slicing in python](https://www.geeksforgeeks.org/string-slicing-in-python/).
+5. Write a new fastq record (4 lines) to the output file. Do this for all the records.
+6. Close your files.
+
+
