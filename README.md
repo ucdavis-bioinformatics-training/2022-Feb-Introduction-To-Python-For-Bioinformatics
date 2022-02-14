@@ -38,5 +38,5 @@ If you have any questions, please don’t hesitate to contact us at training.bio
 
 ### Register
 
-https://registration.genomecenter.ucdavis.edu/events/intro_python_feb_2022_02_28/  
+[https://registration.genomecenter.ucdavis.edu/events/intro_python_feb_2022_02_28](https://registration.genomecenter.ucdavis.edu/events/intro_python_feb_2022_02_28)
 
