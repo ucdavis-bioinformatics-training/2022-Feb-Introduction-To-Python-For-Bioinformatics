@@ -174,7 +174,7 @@ print(logfc(89,12))
 
 # File Handling
 
-Reading from and writing to files is a integral part of programming. First let's [download a TSV (tab separated values) file](https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics/raw/master/python/DMR.GBM2.vs.NB1.tsv). Make sure to save it to the directory that your code is in.
+Reading from and writing to files is a integral part of programming. First let's [download a TSV (tab separated values) file](https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics/raw/master/python/data/DMR.GBM2.vs.NB1.tsv). Make sure to save it to the directory that your code is in.
 
 ```
 print("\nFile Handling\n")

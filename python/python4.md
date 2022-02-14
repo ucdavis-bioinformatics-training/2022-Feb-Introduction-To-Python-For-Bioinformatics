@@ -16,7 +16,7 @@ Hints:
 
 ## Exercise 2 - Get the nucleotide count from a fasta file.
 
-Now we will take our previous code and add to it. Create a new file called "count_file.py". Download [this fasta file](https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics/raw/master/python/seq.fa). Take a look at it... notice it is a multiline fasta file. We are going to do the same count as previously, but we are now doing it for an entire file. You will need to skip the header lines and only count the sequence lines and instead of using the sequence, you will open the file and read sequences from there. You will also reuse the code you wrote in the previous example.
+Now we will take our previous code and add to it. Create a new file called "count_file.py". Download [this fasta file](https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics/raw/master/python/data/seq.fa). Take a look at it... notice it is a multiline fasta file. We are going to do the same count as previously, but we are now doing it for an entire file. You will need to skip the header lines and only count the sequence lines and instead of using the sequence, you will open the file and read sequences from there. You will also reuse the code you wrote in the previous example.
 
 Hints:
 1. Open the file and read it in line by line in a loop.
@@ -56,3 +56,12 @@ Hints:
 ## Exercise 5 - Quality-based fastq trimmer
 
 Okay, now let's try something more complex... a tool for trimming fastq sequences using a quality score cutoff. We will only do this for single-end Illumina reads just to make it easier. First, you need to understand the fastq format and how the quality scores are encoded. So let's take a look at some [bioinformatics file types](filetypes).
+
+Let's [download a small fastq file](data/samp1.fastq) to use. Take a look at it. What we want to do is trim the sequences (and the quality values) so that they are trimmed at the place where a base's (reading from left to right) quality value drops below a given threshold. Let's use a threshold of 30 to begin with. Then write the trimmed data to a new file.
+
+Hints:
+1. First write a function that takes two parameters, a sequence and a quality threshold, and returns the position where the sequence and quality lines will be trimmed. You will need to use the "ord" built-in function, which returns the decimal ASCII value of a character. You will need to use a loop to go through each quality value and check if it drops below the threshold. If it does, you will return the position for that value. If it doesn't then you should return the last position.
+2. Open the input and output files. Loop through the input file, reading 4 lines at a time (into 4 separate variables). Use your function to find the place to cut. 
+3. Cut both the sequence and quality lines using the trimming position and [string slicing in python](https://www.geeksforgeeks.org/string-slicing-in-python/).
+4. Write a new fastq record (4 lines) to the output file. Do this for all the records.
+5. Close your files.
