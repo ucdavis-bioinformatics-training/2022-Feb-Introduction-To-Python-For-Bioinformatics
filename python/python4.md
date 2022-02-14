@@ -55,4 +55,4 @@ Hints:
 
 ## Exercise 5 - Quality-based fastq trimmer
 
-Okay, now let's try something more complex... a tool for trimming fastq sequences using a quality score cutoff. We will only do this for single-end Illumina reads just to make it easier. First, you need to understand the fastq format and how the quality scores are encoded.
+Okay, now let's try something more complex... a tool for trimming fastq sequences using a quality score cutoff. We will only do this for single-end Illumina reads just to make it easier. First, you need to understand the fastq format and how the quality scores are encoded. So let's take a look at some [bioinformatics file types](filetypes).
