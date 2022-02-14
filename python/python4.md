@@ -69,3 +69,16 @@ Hints:
 6. Close your files.
 
 
+## Exercise 6 - Fixing logical errors and adding command-line options in the trimmer
+
+If we take a look at the output from our previous exercise, we will see that there are some obvious problems we need to fix, and maybe some enhancements we could make. And it would be useful to be able to run our code on different files with different thresholds without having to change the code itself. The way to do that is to use **command-line arguments**. The command-line is a way of interacting with the computer through typing commands rather than using a mouse. You will have noticed that when you press the play button in VSCode, it actually runs the command in a terminal. We can add options to this command which will be sent to our code every time. There are multiple ways to do this, but we will be using a [module called "argparse"](https://docs.python.org/3/howto/argparse.html). A module is a library of functions (and other things) that you can import into your code to use. Modules should be imported at the very top of your code. argparse has many capabilities, but we will only be using one. The following code will set up command line arguments for you and put them into a variable called "args". To access the values, you simply use **args.infile**, **args.outfile**, and **args.threshold**.
+
+```
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--infile", help="Input file name", required=True)
+parser.add_argument("--outfile", help="Output file name", required=True)
+parser.add_argument("--threshold", help="Quality threshold for trimming", required=True)
+args = parser.parse_args()
+```
