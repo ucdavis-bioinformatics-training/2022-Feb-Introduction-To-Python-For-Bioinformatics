@@ -13,11 +13,11 @@ This workshop will teach the fundamentals of programming to beginning analysis o
 
 A preliminary agenda for the week includes:
 
-* Monday	Intro to VSCode, programming concepts, variables & data types, operators
-* Tuesday	Lists, Tuples, Dictionaries, flow control
-* Wednesday Functions, Scope, Algorithms
-* Thursday	Intro to Python Bioinformatics packages/modules, biopython, pysam
-* Friday	Writing simple bioinformatics tools
+* Monday: Intro to VSCode, programming concepts, variables & data types, operators
+* Tuesday: Lists, Tuples, Dictionaries, flow control
+* Wednesday: Functions, Scope, Algorithms
+* Thursday: Intro to Python Bioinformatics packages/modules, biopython, pysam
+* Friday: Writing simple bioinformatics tools
 
 ### FAQ
 
