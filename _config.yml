@@ -11,7 +11,7 @@ navigation:
     url: base/welcome
   - title: Installing python3 and VSCode
     url: base/install
-  - title: File Types
+  - title: Bioinformatics File Types
     url: python/filetypes
 
   - heading: Python
