@@ -79,7 +79,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--infile", help="Input file name", required=True)
 parser.add_argument("--outfile", help="Output file name", required=True)
-parser.add_argument("--qual_threshold", help="Quality threshold for trimming", required=True, type=int)
+parser.add_argument("--qual_threshold", help="Quality threshold for trimming", required=True, type=int, default=20)
 args = parser.parse_args()
 ```
 
