@@ -30,3 +30,5 @@ navigation:
     url: https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics
   - title: Biocore website
     url: https://bioinformatics.ucdavis.edu/
+  - title: Rosalind
+    url: https://rosalind.info/problems/list-view/
