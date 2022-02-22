@@ -63,10 +63,7 @@ fp.close()
 
 ## Adapter Trimmer
 
-Now, you should have enough knowledge to be able to write a simple adapter trimmer for fastq files. The adapter will be specified in a fasta file (with the one sequence) and the fastq file will be single-end (to keep things simple). The algorithm is to match all or part of the adapter sequence to the end of a read. If it matches, remove the adapter part of the sequence. Then write the new record to the output file. You should use argparse for parsing options.
-
-Hints:
-1. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string, however, you will also allow a certain number of mismatches. E.g., the following would constitute a match if the mismatch threshold was 2 or more:
+Now, you should have enough knowledge to be able to write a simple adapter trimmer for fastq files. The adapter will be specified in a fasta file (with the one sequence) and the fastq file will be single-end (to keep things simple). The algorithm is to match all or part of the adapter sequence to the end of a read. If it matches, remove the adapter part of the sequence. Then write the new record to the output file. You should use argparse for parsing options. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string, however, you will also allow a certain number of mismatches. E.g., the following would constitute a match if the mismatch threshold was 2 or more:
 
 <pre>
 Adapter:                               CTGTCTCTTAT<span style="color: red">G</span>CACATCTCCGAGCCCACGAGA<span style="color: red">T</span>AACATCGCGCATCTCGTATGCCGT
@@ -94,3 +91,13 @@ Adapter:                               <span style="color: green">CTGTCTC</span>
 Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTC
 Output:   ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTC
 </pre>
+
+Hints:
+1. Write a trimming function that takes in a sequence, an adapter, a mismatch threshold, and a minimum matching threshold. You will need to loop through each position of the sequence, and for each position you check the adapter against the sequence starting from that position. You will need to keep track of the matches and mismatches. If the mismatches exceed the threshold, then you do not trim. If the end of the sequence is reached and the number of matches does not exceed the minimum, then you do not trim. Otherwise, you trim from the adapter position to the end of the read. The function returns the position where to trim.
+2. In the main part of your code, use argparse to create options for the input fastq file, the input fasta adapter file, the output file name, the mismatch threshold, the minimum matching threshold, and the minimum length threshold after trimming.
+3. Open the adapter file and, using Biopython, read the adapter sequence into an object.
+4. Open the input file and output file.
+5. Using Biopython, read the fastq file in one record at at time. Use your function to get the trimming position. Trim both the sequence and the qualities using that position.
+6. Create a new SeqRecord and write it to the output file if the trimmed sequence length is not below the length threshold.
+7. Do this for all the records.
+8. Close your files.
