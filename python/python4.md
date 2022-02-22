@@ -85,7 +85,7 @@ args = parser.parse_args()
 
 Now, we also want to add a parameter that is a threshold length for keeping a read after trimming, which should be a default of 1. Call it "length_threshold". Then use that parameter to discard any reads (records) whose lengths are less than the threshold. Create a new file called "fastq_trimmer2.py" and copy over your previous code into this new program file and then add to this code. To test your program, you will need to run something like the following line in a Terminal in VSCode:
 
-python3 fastq_trimmer2.py --infile samp1.fastq --outfile samp1.trimmed.fastq --qual_threshold 20 --length_threshold 5
+	python3 fastq_trimmer2.py --infile samp1.fastq --outfile samp1.trimmed.fastq --qual_threshold 20 --length_threshold 5
 
 Hints:
 1. Add the import to the top of your code and add the parser lines before you start the main code, but after your function.
