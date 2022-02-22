@@ -95,6 +95,7 @@ Output:   ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTC
 Hints:
 1. Put your imports at the top of your code file.
 1. Write a trimming function that takes in a sequence, an adapter, a mismatch threshold, and a minimum matching threshold. You will need to loop through each position of the sequence, and for each position you check the adapter against the sequence starting from that position. You will need to keep track of the matches and mismatches. If the mismatches exceed the threshold, then you do not trim. If the end of the sequence is reached and the number of matches does not exceed the minimum, then you do not trim. Otherwise, you trim from the adapter position to the end of the read. The function returns the position where to trim.
+2. Test out your function with some example cases to make sure it works.
 2. In the main part of your code, use argparse to create options for the input fastq file, the input fasta adapter file, the output file name, the mismatch threshold, the minimum matching threshold, and the minimum length threshold after trimming.
 3. Open the adapter file and, using Biopython, read the adapter sequence into an object.
 4. Open the input file and output file.
