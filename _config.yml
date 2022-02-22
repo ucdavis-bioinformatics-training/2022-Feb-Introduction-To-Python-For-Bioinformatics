@@ -23,6 +23,8 @@ navigation:
     url: python/python3
   - title: Writing Programs
     url: python/python4
+  - title: Biopython and bamnostic/pysam
+    url: python/python5
 
   - heading: ETC
   - title: Closing Thoughts
