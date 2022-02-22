@@ -86,3 +86,11 @@ Adapter:                               <span style="color: green">CTGTCTCTTA</sp
 Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTCTTATACACATCTCCGAGCCCACGAGACAA
 Output:   ACTACAAGGACGACGATGATAAGAAGCTT
 </pre>
+
+The following scenario **would not** be trimmed:
+
+<pre>
+Adapter:                               <span style="color: green">CTGTCTC</span>TTATACACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGT
+Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTC
+Output:   ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTC
+</pre>
