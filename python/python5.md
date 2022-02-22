@@ -66,9 +66,23 @@ fp.close()
 Now, you should have enough knowledge to be able to write a simple adapter trimmer for fastq files. The adapter will be specified in a fasta file (with the one sequence) and the fastq file will be single-end (to keep things simple). The algorithm is to match all or part of the adapter sequence to the end of a read. If it matches, remove the adapter part of the sequence. Then write the new record to the output file. You should use argparse for parsing options.
 
 Hints:
-1. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string, however, you will also allow a certain number of mismatches. I.e.:
+1. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string, however, you will also allow a certain number of mismatches. E.g., the following would constitute a match if the mismatch threshold was 2 or more:
 
 <pre>
 Adapter:                               CTGTCTCTTAT<span style="color: red">G</span>CACATCTCCGAGCCCACGAGA<span style="color: red">T</span>AACATCGCGCATCTCGTATGCCGT
 Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTCTTATACACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGTCTTCTGCTTGAATAAATCGGAA
+</pre>
+
+If you find a full match (within the mismatch threshold), then you cut the portion of the read from the adapter to the end. I.e., for the above example the output sequence would be:
+
+<pre>
+Output Sequence: ACTACAAGGACGACGATGATAAGAAGCTT
+</pre>
+
+Also, for a partial match (within the mismatch threshold) that goes to the end of the sequence and is greater than some threshold for matches (say 10), you would trim at the adapter:
+
+<pre>
+Adapter:                               <span style="color: green">CTGTCTCTTA</span>TACACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGT
+Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTCTTATACACATCTCCGAGCCCACGAGACAA
+Output:   ACTACAAGGACGACGATGATAAGAAGCTT
 </pre>
