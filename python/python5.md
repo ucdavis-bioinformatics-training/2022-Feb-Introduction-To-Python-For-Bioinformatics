@@ -98,6 +98,6 @@ Hints:
 3. Open the adapter file and, using Biopython, read the adapter sequence into an object.
 4. Open the input file and output file.
 5. Using Biopython, read the fastq file in one record at at time. Use your function to get the trimming position. Trim both the sequence and the qualities using that position.
-6. Create a new SeqRecord and write it to the output file if the trimmed sequence length is not below the length threshold.
+6. Create a new SeqRecord and write it to the output file if the trimmed sequence length is greater than or equal to the minimum length threshold.
 7. Do this for all the records.
 8. Close your files.
