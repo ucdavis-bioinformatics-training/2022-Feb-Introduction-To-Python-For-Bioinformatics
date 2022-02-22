@@ -69,6 +69,6 @@ Hints:
 1. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string, however, you will also allow a certain number of mismatches. I.e.:
 
 <pre>
-Adapter:                               CTGTCTCTTAT<span style="color: red">A</span>CACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGT
+Adapter:                               CTGTCTCTTAT<span style="color: red">G</span>CACATCTCCGAGCCCACGAGA<span style="color: red">T</span>AACATCGCGCATCTCGTATGCCGT
 Sequence: ACTACAAGGACGACGATGATAAGAAGCTTCTGTCTCTTATACACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGTCTTCTGCTTGAATAAATCGGAA
 </pre>
