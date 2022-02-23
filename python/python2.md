@@ -58,6 +58,11 @@ print(newstr)
 # you can also use the + symbol to concatenate strings
 tmpstr2 = "How are you doing?"
 print(tmpstr + " " + tmpstr2)
+
+# you can find the position of one string in another
+# returns -1 if not found
+print(tmpstr2.find("you"))
+print(tmpstr2.find("california"))
 ```
 
 Here is a [list of the various methods](https://www.w3schools.com/python/python_ref_string.asp) you can use on strings.
@@ -272,4 +277,7 @@ print(gene_exp_dict.items())
 
 # you can also check if a key exists in a dictionary
 print("BRCA2" in gene_exp_dict)
+
+# to make a copy of a dictionary, you need to use the "copy" method
+gene_exp_dict_copy = gene_exp_dict.copy()
 ```
