@@ -58,18 +58,52 @@ fp.close()
 ```
 
 
-## bamnostic and pysam
+## pysam
 
-For some reason, Biopython does not do sequence alignment files (different from multiple alignment files), so typically people use a package called "pysam" for those files. However, pysam (for some reason) does not seem to install on Windows, so we are going to use a package called "bamnostic" instead, which is very similar to pysam, but will run on Windows. First install bamnostic:
+For some reason, Biopython does not do sequence alignment files (different from multiple alignment files), so typically people use a package called [pysam](https://pysam.readthedocs.io/en/latest/api.html) for those files. However, pysam (for some reason) does not seem to install on Windows, so Windows folks have two options: a package called [bamnostic](https://bamnostic.readthedocs.io/en/latest/) that has reduced functionality but very similar to pysam, or use pysam in Ubuntu on Windows 10.
 
-	pip install bamnostic
+[Download this bam file](data/align.bam) and [its index file](data/align.bam.bai) to play with. For Windows 10 folks using bamnostic the following commands should work the same, just substitute "bamnostic" for "pysam".
+
+```
+import pysam
+
+bam = pysam.AlignmentFile("align.bam", 'rb')
+
+# get all of the attributes of the object
+print(dir(bam))
+
+# get the header data
+print(bam.header)
+
+# get the next alignment
+align = next(bam)
+print(align)
+
+# print its attributes
+print(dir(align))
+
+# use a loop to iterate through the alignments
+for alignment in bam:
+	print(alignment.reference_name, alignment.pos)
+
+# you can fetch alignments from a certain locus
+locus = bam.fetch("CHR8",10000000,60000000)
+for alignment in locus:
+	print(alignment.reference_name, alignment.pos)
+```
+
+pysam can also read/write fasta and fastq files, however, bamnostic cannot, so the following commands will only work for pysam.
+
+```
+import pysam
 
 
+```
 
 
-## Adapter Trimmer
+## Exercise 7 - Adapter Trimmer
 
-Now, you should have enough knowledge to be able to write a simple adapter trimmer for fastq files. The adapter will be specified in a fasta file (with the one sequence) and the fastq file will be single-end (to keep things simple). The algorithm is to match all or part of the adapter sequence to the end of a read. If it matches, remove the adapter part of the sequence. Then write the new record to the output file. You should use argparse for parsing options. The trimming function should take in a read sequence and adapter sequence. You will loop through the read starting from the first base and try to match the adapter string to the sequence string. E.g., the following would constitute a match:
+Now, you should have enough knowledge to be able to write a simple adapter trimmer for fastq files. The adapter will be specified in a fasta file (with the one sequence) and the fastq file will be single-end (to keep things simple). The algorithm is to match all of the adapter within the read or part of the adapter sequence to the end of the read, with a minimum number of matches. If it matches, remove the adapter part of the sequence. Then write the new record to the output file. You should use argparse for parsing options. The trimming function should take in a read sequence, and adapter sequence, and the minimum match threshold. You will loop through the read starting from the first base and try to match the adapter string to the sequence string. E.g., the following would constitute a match:
 
 <pre>
 Adapter:                               CTGTCTCTTATACACATCTCCGAGCCCACGAGACAACATCGCGCATCTCGTATGCCGT
