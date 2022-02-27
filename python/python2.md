@@ -132,6 +132,7 @@ print(tmpbool)
 
 # convert a decimal to a string
 # the print function can only print strings
+# anything that isn't a string needs to be converted to a string using the "str" method, to be able to print it.
 x = 45.5
 print("The number is: " + str(x))
 
@@ -146,7 +147,7 @@ print(str(myint))
 <img src="figures/ed9e3c89.png" alt="if flow" width="600px"/>
 
 ```
-print("\nArithmatic\n")
+print("\nArithmetic\n")
 
 # This is a comment. Comments are lines that being with a hashtag symbol.
 # They are ignored by the python interpreter and are used to document your code.

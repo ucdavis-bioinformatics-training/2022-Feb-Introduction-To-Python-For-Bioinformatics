@@ -150,12 +150,16 @@ Hints:
 1. Write a trimming function that takes in a sequence, an adapter, and a minimum matching threshold. First check if the full adapter sequence occurs in the string, and if it does, return the position of the first base of the adapter. Then, starting with the full adapter sequence and removing one base at a time from the end, loop through the adapter and see if it matches to the end of the sequence. Look at the string methods to find one that will be useful for this. If any of the subsequences match to the end, return the position of the adapter. Only check until you have reached the minimum matching threshold. If no matches are found, return the length of the sequence.
 2. Test out your function with some example cases to make sure it works.
 2. In the main part of your code, use argparse to create options for the input fastq file, the input fasta adapter file, the output file name, the minimum matching threshold, and the minimum length threshold after trimming.
-3. Open the adapter file and, using Biopython, read the adapter sequence into an object.
+3. Open the adapter file and, using Biopython (or pysam), read the adapter sequence into an object.
 4. Open the input file and output file.
-5. Using Biopython, read the fastq file in one record at at time. Use your function to get the trimming position. Trim both the sequence and the qualities using that position. You will need to use the "copy" method for dictionaries to make a copy of the "letter_annotations" (qualities) dictionary to change.
+5. Using Biopython (or pysam), read the fastq file in one record at at time. Use your function to get the trimming position. Trim both the sequence and the qualities using that position. You will need to use the "copy" method for dictionaries to make a copy of the "letter_annotations" (qualities) dictionary to change.
 6. Create a new SeqRecord and write it to the output file if the trimmed sequence length is greater than or equal to the minimum length threshold.
 7. Do this for all the records.
 8. Close your files.
 
 To test the final product, you will need to [download the adap.fa](data/adap.fa) file to use with your samp1.fastq file.
 
+
+### Extra Hard Challenge
+
+Recode the adapter trimmer so that the adapter can have a maximum number of mismatches to the sequence (specified by the user).

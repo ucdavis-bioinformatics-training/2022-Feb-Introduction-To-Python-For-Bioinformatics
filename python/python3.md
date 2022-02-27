@@ -98,7 +98,7 @@ for id in gene_list:
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
 
 for gene in gene_exp_dict.keys():
-	print("Gene " + gene + " has expression value: " + gene_exp_dict[gene])
+	print("Gene " + gene + " has expression value: " + str(gene_exp_dict[gene]))
 ```
 
 
