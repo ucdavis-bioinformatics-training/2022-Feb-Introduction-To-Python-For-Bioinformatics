@@ -152,10 +152,15 @@ print("\nArithmetic\n")
 # This is a comment. Comments are lines that being with a hashtag symbol.
 # They are ignored by the python interpreter and are used to document your code.
 a = 21
-b = 34
+b = 3
 
 # Addition
 print(a + b)
+
+# "c += 5" is shorthand for "c = c + 5"
+c = 83
+c += 5
+print(c)
 
 # Subtraction
 print(b - a)
