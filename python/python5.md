@@ -97,7 +97,20 @@ pysam can also read/write fasta and fastq files, however, bamnostic cannot, so t
 ```
 import pysam
 
+# you can create indexes for files within python
+pysam.faidx("seq.fa")
 
+# then you can randomly access a sequence
+ff = pysam.FastaFile("seq.fa")
+print(ff.fetch("seq7"))
+
+# use FastxFile for fastq files
+fq = pysam.FastxFile("samp1.fastq")
+for record in fq:
+	print(record.name)
+	print(record.sequence)
+	print(record.comment)
+	print(record.quality)
 ```
 
 
