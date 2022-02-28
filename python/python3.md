@@ -14,7 +14,7 @@ Flow control is the bread and butter of programming. It is how you can program d
 
 \*\*\***INDENTATION MATTERS!!!**\*\*\*
 
-In many other languages, the "body" of an "if statement" (or any other programming construct that has a "body") is designated by curly braces. However, python doesn't do that. Instead, the "body" is designated by indentation. Any code that is indented to the same level is considered to be part of the same "body". The "condition" of the if statement is evaluated to be True or False. If True, then the code block associated with that statement is executed and not any others. If False, then the next statement is evaluated. "else" is the catchall default.
+In many other languages, the "body" of an "if statement" (or any other programming construct that has a "body") is designated by curly braces. However, python doesn't do that. Instead, the "body" is designated by indentation. Any code that is indented to the same level is considered to be part of the same "body". However, you should not mix tabs and space characters. The "condition" of the if statement is evaluated to be True or False. If True, then the code block associated with that statement is executed and not any others. If False, then the next statement is evaluated. "else" is the catchall default.
 
 ```
 print("\nIF Statements\n")
@@ -47,7 +47,7 @@ elif (diffexp < 0):
 elif (diffexp < -50):
 	print("Very Downregulated")
 
-# You can use "and" & "or" to write more complex conditions
+# You can use "and", "or", & "not" to write more complex conditions
 if (diffexp > 0 and diffexp < 50):
 	print("Differential expression between 0 and 50")
 
@@ -60,7 +60,7 @@ if (diffexp > 0 and diffexp < 50):
 	print("Differential expression between 0 and 50")
 	print("Check the significance")
 
-# You can have if statements inside of other if statements
+# You can have nested if statements
 sig = 0.049
 if (diffexp > 0 and diffexp < 50):
 	print("Differential expression between 0 and 50")
@@ -68,6 +68,8 @@ if (diffexp > 0 and diffexp < 50):
 	if (sig < 0.05):
 		print("It's significant!")
 ```
+
+**PRACTICE**: Write an if statement with multiple elifs and an else at the end.
 
 # For Loops
 
@@ -136,6 +138,8 @@ for id in gene_list:
 	print(id + " is a gene of interest")
 ```
 
+**PRACTICE**: Using your personnel dictionary (from the Dictionary section practice), use a loop to print out all of the information for all of the employees. Using the gene expression dictionary, use multiple nested loops to print out all of the expression values.
+
 # Functions
 
 A function is a block of code that only gets run when it is called. It can take multiple parameters and can return values as well. Functions are an integral part of making reusable and clear code. 
@@ -171,6 +175,9 @@ def logfc(exp1,exp2,sigdig=3):
 print(logfc(89,12,5))
 print(logfc(89,12))
 ```
+
+**PRACTICE**: Write a function to calculate the Fibonacci numbers given a maximum. Return a list of Fibonacci numbers below that max.
+
 
 # File Handling
 
@@ -216,6 +223,9 @@ f4 = open("myfile.txt","r")
 print(f4.read())
 f4.close()
 ```
+
+**PRACTICE**: Using your personnel dictionary, loop through the employees and create a TSV with one employee per line. Make sure to have a header line. Do the same for the gene expression dictionary.
+
 
 # Errors
 

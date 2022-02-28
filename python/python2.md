@@ -55,6 +55,9 @@ print(allcaps)
 newstr = tmpstr.replace("Nik","Joe")
 print(newstr)
 
+# This is a comment. Comments are lines that being with a hashtag symbol.
+# They are ignored by the python interpreter and are used to document your code.
+
 # you can also use the + symbol to concatenate strings
 tmpstr2 = "How are you doing?"
 print(tmpstr + " " + tmpstr2)
@@ -66,6 +69,8 @@ print(tmpstr2.find("california"))
 ```
 
 Here is a [list of the various methods](https://www.w3schools.com/python/python_ref_string.asp) you can use on strings.
+
+**PRACTICE**: Take a look at the string methods and play around with them. See if you can figure out how to use the "split", "isdigit", and "index" methods.
 
 ### Booleans
 
@@ -92,6 +97,8 @@ print(1==1)
 print(0==1)
 
 # You can also do string comparisons
+gene_id = "BRCA2"
+hw = "HELLO!!! WORLD!!!"
 print(gene_id == "BRCA2")
 print(hw == "hello")
 ```
@@ -142,15 +149,12 @@ myint = int(mystr) + 1
 print(str(myint))
 ```
 
-
-# Arithmetic: Adding, subtracting, multiplication, assignment arithmetic (assignment operators).
+# Arithmetic: Addition/subtraction, multiplication/division, assignment arithmetic (assignment operators).
 <img src="figures/ed9e3c89.png" alt="if flow" width="600px"/>
 
 ```
 print("\nArithmetic\n")
 
-# This is a comment. Comments are lines that being with a hashtag symbol.
-# They are ignored by the python interpreter and are used to document your code.
 a = 21
 b = 3
 
@@ -190,6 +194,10 @@ print(math.floor(3.7))
 print(int(3.7))
 ```
 
+The [math package](https://docs.python.org/3/library/math.html) has many common math functions you can use.
+
+**PRACTICE**: Add and multiply various datatypes together using conversions and math methods. Play around with other math methods. Try the "atan2" method and try the "log" method with a different base than the default.
+
 
 # Basic Data Structures: Lists, Sets, Tuples, Dictionaries.
 
@@ -224,12 +232,24 @@ mystring = "The Quick Brown Fox"
 print(mystring[4:9])
 
 # get the length of a list
-len(gene_list)
+print("The length of gene_list is " + len(gene_list))
 
 # lists can have elements of any type
 gene_exp = [43.2, 45, 60.1, 12, 0.5, 23]
 expval = gene_exp[2]
 print(expval)
+
+# creating a new variable equal to a list does NOT create a copy
+# both variables point to the same list
+gene_list2 = gene_list
+gene_list2[2] = "DMR3"
+print(gene_list)
+
+# use the copy method to make a actual copy of a list
+gene_list2 = gene_list.copy()
+gene_list2[2] = "DMR5"
+print(gene_list)
+print(gene_list2)
 ```
 ### Built-in list methods
 
@@ -246,11 +266,14 @@ gene_list.reverse()
 print(gene_list)
 ```
 
-Here is a [list of functions and methods for lists](https://www.tutorialspoint.com/built-in-list-functions-and-methods-in-python).
+Here is a [list of functions and methods for lists](https://www.tutorialsteacher.com/python/list-methods).
+
+**PRACTICE**: Play with some list methods. Try out the "pop", "insert", and "sort" methods. Try to insert a new gene name in the middle of gene_list.
+
 
 ## Dictionaries
 - A set of key/value pairs where the keys are unique. Used primarily when you want to use a string as an index.
-- Dictionary values are pointed to by the keys. Values can be anything from int, float, and bool to lists, tuples, and dictionaries.
+- Dictionary values are pointed to by the keys. Values can be anything from int, float, and bool to lists, tuples, and other dictionaries.
 
 <img src="figures/abda21dc.png" alt="dictionary" width="600px"/>
 
@@ -287,3 +310,5 @@ print("BRCA2" in gene_exp_dict)
 # to make a copy of a dictionary, you need to use the "copy" method
 gene_exp_dict_copy = gene_exp_dict.copy()
 ```
+
+**PRACTICE**: Create a dictionary for personnel in a company where each person has a unique employee ID, and for each employee you have a name, an address, and a DOB. Populate this dictionary with at least two employees. Write the code to get the address of the 2nd employee. Create a dictionary for gene expression of multiple genes for multiple samples. Populate the dictionary with at least 3 genes for 5 samples. Write the code to get the gene expression for the 2nd gene, 4th sample.
