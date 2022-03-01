@@ -199,7 +199,7 @@ The [math package](https://docs.python.org/3/library/math.html) has many common 
 **PRACTICE**: Add and multiply various datatypes together using conversions and math methods. Play around with other math methods. Try the "atan2" method and try the "log" method with a different base than the default.
 
 
-# Basic Data Structures: Lists, Sets, Tuples, Dictionaries.
+# Basic Data Structures: Lists and Dictionaries.
 
 ## Lists
 +  <img src="figures/44b15102.png" alt="if flow" width="600px"/>
