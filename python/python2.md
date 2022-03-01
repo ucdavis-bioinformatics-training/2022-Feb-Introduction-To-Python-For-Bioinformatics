@@ -232,7 +232,7 @@ mystring = "The Quick Brown Fox"
 print(mystring[4:9])
 
 # get the length of a list
-print("The length of gene_list is " + len(gene_list))
+print("The length of gene_list is " + str(len(gene_list))
 
 # lists can have elements of any type
 gene_exp = [43.2, 45, 60.1, 12, 0.5, 23]
