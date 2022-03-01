@@ -250,6 +250,9 @@ gene_list2 = gene_list.copy()
 gene_list2[2] = "DMR5"
 print(gene_list)
 print(gene_list2)
+
+# use the "in" keyword to check for membership in a list
+print("BRCA2" in gene_list)
 ```
 ### Built-in list methods
 
