@@ -6,7 +6,7 @@ Now we will explore some packages for interfacing with common bioinformatics fil
 
 [Biopython](https://biopython.org/) is a set of python libraries for software that provide a robust interface to various file types used in bioinformatics. If you haven't installed Biopython, then do so now by opening a Terminal in VSCode and typing this:
 
-	pip install biopython
+    pip install biopython
 
 Now, let's take a look at some of the features. Biopython is based on classes and objects. Simply put, an **Object** is data bundled with functions that works on that data and a **Class** is a blueprint for an object. The first class we'll look at is the "Seq" class, which is a class that holds sequence data.
 
@@ -46,8 +46,8 @@ for record in SeqIO.parse("samp1.fastq", "fastq"):
 
 # you can do the same with a fasta file
 for record in SeqIO.parse("seq.fa", "fasta"):
-	print(record.id)
-	print(record.seq)
+    print(record.id)
+    print(record.seq)
 
 
 # You can also write records (files) using the "write" method
@@ -84,12 +84,12 @@ print(dir(align))
 
 # use a loop to iterate through the alignments
 for alignment in bam:
-	print(alignment.reference_name, alignment.pos)
+    print(alignment.reference_name, alignment.pos)
 
 # you can fetch alignments from a certain locus
 locus = bam.fetch("CHR8",10000000,60000000)
 for alignment in locus:
-	print(alignment.reference_name, alignment.pos)
+    print(alignment.reference_name, alignment.pos)
 ```
 
 pysam can also read/write fasta and fastq files, however, bamnostic cannot, so the following commands will only work for pysam.
@@ -107,10 +107,10 @@ print(ff.fetch("seq7"))
 # use FastxFile for fastq files
 fq = pysam.FastxFile("samp1.fastq")
 for record in fq:
-	print(record.name)
-	print(record.sequence)
-	print(record.comment)
-	print(record.quality)
+    print(record.name)
+    print(record.sequence)
+    print(record.comment)
+    print(record.quality)
 ```
 
 

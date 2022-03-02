@@ -21,52 +21,52 @@ print("\nIF Statements\n")
 
 diffexp = 67
 if (diffexp > 0):
-	print("Upregulated")
+    print("Upregulated")
 else:
-	print("Downregulated")
+    print("Downregulated")
 
 diffexp = -9
 if (diffexp > 0):
-	print("Upregulated")
+    print("Upregulated")
 else:
-	print("Downregulated")
+    print("Downregulated")
 
 # An if statement doesn't need an else
 if (diffexp < 0):
-	print("Downregulated")
+    print("Downregulated")
 
 # If statements can have multiple elif (else if)
 # Try changing the value of diffexp to see how the output changes.
 diffexp = 25
 if (diffexp > 50):
-	print("Very Upregulated")
+    print("Very Upregulated")
 elif (diffexp > 0):
-	print("Upregulated")
+    print("Upregulated")
 elif (diffexp < 0):
-	print("Downregulated")
+    print("Downregulated")
 elif (diffexp < -50):
-	print("Very Downregulated")
+    print("Very Downregulated")
 
 # You can use "and", "or", & "not" to write more complex conditions
 if (diffexp > 0 and diffexp < 50):
-	print("Differential expression between 0 and 50")
+    print("Differential expression between 0 and 50")
 
 if (diffexp < -50 or diffexp > 50):
-	print("High Down or Up regulation")
+    print("High Down or Up regulation")
 
 # The body of an if statement can have multiple lines of code
 diffexp=25
 if (diffexp > 0 and diffexp < 50):
-	print("Differential expression between 0 and 50")
-	print("Check the significance")
+    print("Differential expression between 0 and 50")
+    print("Check the significance")
 
 # You can have nested if statements
 sig = 0.049
 if (diffexp > 0 and diffexp < 50):
-	print("Differential expression between 0 and 50")
+    print("Differential expression between 0 and 50")
 
-	if (sig < 0.05):
-		print("It's significant!")
+    if (sig < 0.05):
+        print("It's significant!")
 ```
 
 **PRACTICE**: Imagine a gene expression dictionary like the one from the Dictionary section, except arbitrary keys and expression values. Write an if statement (or statements) that do the following:
@@ -86,7 +86,7 @@ print("\nFor Loops\n")
 
 # The range(n) function returns values from 0 to n-1
 for i in range(5):
-	print(i)
+    print(i)
 ```
 
 ### Iterating through a List
@@ -95,7 +95,7 @@ for i in range(5):
 gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
 
 for id in gene_list:
-	print(id + " is a gene of interest")
+    print(id + " is a gene of interest")
 ```
 
 ### Iterating through a Dictionary
@@ -104,7 +104,7 @@ for id in gene_list:
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
 
 for gene in gene_exp_dict.keys():
-	print("Gene " + gene + " has expression value: " + str(gene_exp_dict[gene]))
+    print("Gene " + gene + " has expression value: " + str(gene_exp_dict[gene]))
 ```
 
 
@@ -118,8 +118,8 @@ print("\nWhile Loops\n")
 n = 1
 fact = 1
 while (n < 8):
-	fact = fact * n
-	n += 1
+    fact = fact * n
+    n += 1
 print(fact)
 ```
 
@@ -131,15 +131,15 @@ print(fact)
 gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
 
 for id in gene_list:
-	print(id + " is a gene of interest")
-	if (id == "MIR1302-2HG"):
-		break
+    print(id + " is a gene of interest")
+    if (id == "MIR1302-2HG"):
+        break
 
 for id in gene_list:
-	if (id == "MIR1302-2HG"):
-		continue
+    if (id == "MIR1302-2HG"):
+        continue
 
-	print(id + " is a gene of interest")
+    print(id + " is a gene of interest")
 ```
 
 **PRACTICE**: Using your personnel dictionary (from the Dictionary section practice), use a loop to print out all of the information for all of the employees. Using the gene expression dictionary, use multiple nested loops to print out all of the expression values.
@@ -156,14 +156,14 @@ print("\nFunctions\n")
 
 # Functions can have zero parameters and return nothing
 def hello():
-	print("Hello, World!")
+    print("Hello, World!")
 
 hello()
 
 # Or they can have multiple parameters and return something
 def logfc(exp1,exp2):
-	retval = math.log(exp2/exp1)
-	return(retval)
+    retval = math.log(exp2/exp1)
+    return(retval)
 
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
 
@@ -172,9 +172,9 @@ print("The DE value is " + str(de))
 
 # They can also have default values for any of the parameters
 def logfc(exp1,exp2,sigdig=3):
-	retval = math.log(exp2/exp1)
-	retval = round(retval, sigdig)
-	return(retval)
+    retval = math.log(exp2/exp1)
+    retval = round(retval, sigdig)
+    return(retval)
 
 print(logfc(89,12,5))
 print(logfc(89,12))
@@ -198,9 +198,9 @@ print(f.readline())
 # you can use a loop to read the whole file, line by line
 f2 = open("DMR.GBM2.vs.NB1.tsv", "r")
 for line in f2:
-	print(line)
+    print(line)
 
-# always close file handles when you done with them
+# always close file handles when you're done with them
 f.close()
 f2.close()
 ```
@@ -268,14 +268,14 @@ Because python is an interpreted language, some errors will only get produced wh
 # because the function does not get called
 myvar = 9
 def px():
-	print(myVar)
+    print(myVar)
 ```
 
 ```
 # This will produce the error when the function is called
 myvar = 9
 def px():
-	print(myVar)
+    print(myVar)
 px()
 ```
 
