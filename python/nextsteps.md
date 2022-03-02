@@ -1,11 +1,12 @@
 # Now what?
 
-## Things we didn't cover
+## Topics we didn't cover
 
 * [Classes, OOP, and Inheritance](https://www.w3schools.com/python/python_classes.asp)
 * [Regular Expressions](https://docs.python.org/3/howto/regex.html)
 * [List Comprehensions](https://www.w3schools.com/python/python_lists_comprehension.asp)
 * [Tuples & Sets](https://pygear.wordpress.com/python-tuples-and-sets/)
+* [Exception Handling](https://www.geeksforgeeks.org/python-exception-handling/)
 * [Python Standard Libraries](https://docs.python.org/3/library/index.html)
 * [Pandas & Data Analysis](https://pandas.pydata.org/)
 * [Creating modules](https://www.geeksforgeeks.org/create-and-import-modules-in-python/)
@@ -19,3 +20,7 @@
 * [Lambda functions/expressions](https://www.w3schools.com/python/python_lambda.asp)
 * [Network programming (internet)](https://www.geeksforgeeks.org/python-network-programming/)
 * [Many, MANY, packages...](https://pypi.org/)
+
+## Rosalind
+
+## Practice, Practice, Practice
