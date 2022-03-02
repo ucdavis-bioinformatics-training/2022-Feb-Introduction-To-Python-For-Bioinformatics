@@ -27,7 +27,7 @@ navigation:
     url: python/python5
 
   - heading: ETC
-  - title: Closing Thoughts
+  #- title: Closing Thoughts
   - title: Github Page
     url: https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics
   - title: Biocore website
