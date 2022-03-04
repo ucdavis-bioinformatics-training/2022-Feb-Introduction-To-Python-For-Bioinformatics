@@ -57,7 +57,6 @@ SeqIO.write(sr, fp, "fasta")
 fp.close()
 ```
 
-
 ## pysam
 
 For some reason, Biopython does not do sequence alignment files (different from multiple alignment files), so typically people use a package called [pysam](https://pysam.readthedocs.io/en/latest/api.html) for those files. However, pysam (for some reason) does not seem to install on Windows, so Windows folks have two options: a package called [bamnostic](https://bamnostic.readthedocs.io/en/latest/) that has reduced functionality but very similar to pysam, or use pysam in Ubuntu on Windows 10.
