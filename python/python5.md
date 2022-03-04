@@ -62,7 +62,7 @@ fp.close()
 
 For some reason, Biopython does not do sequence alignment files (different from multiple alignment files), so typically people use a package called [pysam](https://pysam.readthedocs.io/en/latest/api.html) for those files. However, pysam (for some reason) does not seem to install on Windows, so Windows folks have two options: a package called [bamnostic](https://bamnostic.readthedocs.io/en/latest/) that has reduced functionality but very similar to pysam, or use pysam in Ubuntu on Windows 10.
 
-[Download this bam file](data/align.bam) and [its index file](data/align.bam.bai) to play with. For Windows 10 folks using bamnostic the following commands should work the same, just substitute "bamnostic" for "pysam".
+[Download this bam file](data/align.bam) and [its index file](data/align.bam.bai) to play with. For Windows 10 folks using bamnostic the following commands should work the same, just substitute "bamnostic" for "pysam". Use "pip install" to install whichever one you are installing.
 
 ```
 import pysam
