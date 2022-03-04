@@ -23,4 +23,9 @@
 
 ## Rosalind
 
+[Rosalind](https://rosalind.info) is a platform for learning bioinformatics programming. It has many [bioinformatics programming exercises](https://rosalind.info/problems/list-view/) to tackle practicing how to code.
+
+
 ## Practice, Practice, Practice
+
+As with any skill, you need to practice! Try starting from the beginning of the course and trying everything from scratch. If you have an experiment you are working on right now, try coding some python to help you do some of the analysis. Feel free to contact me if you have any questions or run into any problems. Happy Coding!
