@@ -27,11 +27,10 @@ navigation:
     url: python/python5
   - title: Next Steps
     url: python/nextsteps
-  #- title: Exercise Solutions
-  #  url: python/solutions
+  - title: Exercise Solutions
+    url: python/solutions
 
   - heading: ETC
-  #- title: Closing Thoughts
   - title: Github Page
     url: https://github.com/ucdavis-bioinformatics-training/2022-Feb-Introduction-To-Python-For-Bioinformatics
   - title: Biocore website
