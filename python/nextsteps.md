@@ -20,6 +20,7 @@
 * [Lambda functions/expressions](https://www.w3schools.com/python/python_lambda.asp)
 * [Network programming (internet)](https://www.geeksforgeeks.org/python-network-programming/)
 * [Many, MANY, packages...](https://pypi.org/)
+* [Indentation in Python](https://www.scaler.com/topics/python/indentation-in-python/)
 
 ## Rosalind
 
